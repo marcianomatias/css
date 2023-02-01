@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item flex</title>
+  <style>
+    :root {
+      font-family: Arial, Helvetica, monospace;
+    }
+    .container{
+      color: white;
+      display: flex;
+      margin: 0 auto;
+      width: 400px;
+      height: 400px;
+      background: black;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .container .item{
+      font-weight: bold;
+      flex-basis: 80px;
+      flex-grow: 1;
+      background: red;
+      border: 1px solid white;
+      /* Configuração para deixar o texto bem apresentável*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+    }
+    .item.item-especial{
+      /* Definição  de flex-basis diferente para mostrar o comportamento */
+      flex-basis: 120px;
+      flex-grow: 16;
+      /* Experimente outras definições: */
+      /* flex-grow: 4;*/
+      /* flex-grow: 2;*/
+      /* flex-grow: 1;*/
+      background: #fa0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="item">Item flex</div>
+  <div class="item">Item flex</div>
+  <div class="item item-especial">Item flex especial (flex-grow: 2)
+  </div>
+   <div class="item">Item flex</div>
+  <div class="item">Item flex</div>
+  <div class="item">Item flex</div>
+  <div class="item">Item flex</div>
+
+
+</body>
+</html>

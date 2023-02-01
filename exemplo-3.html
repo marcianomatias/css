@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item encolhido</title>
+    <style>
+        :root {
+            font-family: Arial, Helvetica, monospace;
+        }
+        .container {
+            display: flex;
+            margin: 0 auto;
+            /* Limitações do container*/
+            width: 250px;
+            height: 400px;
+
+            background: #0af;
+            padding: 20px;
+        }
+        .container .item {
+            flex-basis: 100px;
+            flex-shrink: 1;
+            flex-grow: 1;
+            background: #f00;
+            border: 1px solid white;
+            /* Configuração para deixar o texto bem apresentável*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Definição de item-2 com altura diferente para mostrar o comportamento*/
+        .item.item-especial{
+            flex-grow: 2;
+            background: #f0a;
+        }
+        .item.item-encolhido{
+            flex-basis: 200px;
+            flex-shrink: 2;
+            /*Expirimente remover essa linha comentada, para que o shrink passe a 0. Isso forçará o elemento
+            a não encolher. Assim ele ocupará o espaço que quer ocupar. Nesse caso: flex-basis:200px */
+            /* flex-shrink: 0; */
+            background: #fa0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item">Item flex (shrink 1)</div>
+    <div class="item item-encolhido">
+        Item flex(flex-basis: 200px, shrink 2)
+    </div>
+</div>
+</body>
+</html>

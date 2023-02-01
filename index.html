@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            display: flex;
+            margin: 0 auto;
+            width: 250px;
+            height: 400px;
+
+            background: black;
+            padding: 20px;
+            flex-wrap: wrap;
+
+
+            justify-content: flex-end;
+            align-content: flex-start;
+            align-items: flex-end;
+        }
+        .container .item{
+            flex: 1;
+            flex-basis: 40px;
+            background: #f00;
+            border: 1px solid #fff;
+        }
+        .item-2{
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Teste</div>
+        <div class="item item-2">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+
+        <div class="item">Teste</div>
+
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+        <div class="item">Teste</div>
+
+    </div>
+</body>
+</html>
